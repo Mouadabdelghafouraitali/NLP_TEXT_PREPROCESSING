@@ -1,7 +1,7 @@
 # NLP_TEXT_PREPROCESSING
 Text preprocessing using NLTK, Huggingface, and spaCy libraries.
 
-Run the `main.py`, a list of choice will appear, select one of the following : 
+Run the `main.py`, a list of choices will appear, select one of the following : 
 
 1 - NLTK
 
