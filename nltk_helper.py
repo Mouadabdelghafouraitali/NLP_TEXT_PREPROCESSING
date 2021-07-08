@@ -73,7 +73,7 @@ class nltk_helper:
     def lemmatization(self):
         wnl = WordNetLemmatizer()
         lemmatized = [wnl.lemmatize(word) for word in word_tokenize(self.english_text)]
-        # Unfortunately, the majority of words have been returned unchanged because they can't found in WordNet
+        # Unfortunately, the majority of the words have been returned with no change because they can't found in WordNet
         # Unfortunately, the arabic words is not found in WordNet either
         print(lemmatized)
 

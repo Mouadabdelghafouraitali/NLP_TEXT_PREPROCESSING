@@ -14,7 +14,7 @@ class huggingface_helper:
         tokenizer = AutoTokenizer.from_pretrained('bert-base-cased')
         # Encode
         # We split the text by "," to get each sentence, we can use self.arabic_text as well
-        encoded_inputs = tokenizer(self.english_text.split(","), padding=True, truncation=True, return_tensors="pt")
+        encoded_inputs = tokenizer(self.english_text.split(","), padding=True, truncation=True, return_tensors="pt") #pt ==> PyTorch
         print(encoded_inputs)
         # Decode
         for ids in encoded_inputs["input_ids"]:

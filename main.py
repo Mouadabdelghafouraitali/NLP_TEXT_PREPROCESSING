@@ -5,8 +5,6 @@ from huggingface_helper import huggingface_helper
 from spacy_helper import spacy_helper
 from pytorch_helper import pytorch_helper
 
-# SpaCy : https://github.com/explosion/spaCy
-# https://iq.opengenus.org/text-preprocessing-in-spacy/
 
 arabic_text = "ربما بدأ أحد أهم التطورات التي حققتها الرياضيات العربية في هذا الوقت مع عمل الخوارزمي ، أي بدايات " \
               "الجبر. من المهم أن نفهم مدى أهمية هذه الفكرة الجديدة. لقد كان ابتعادًا ثوريًا عن المفهوم اليوناني " \
