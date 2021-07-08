@@ -1,5 +1,8 @@
 import re
 import spacy
+from collections import Counter
+
+#from spacy_nlp_tools.simple_nlp import nlp
 
 
 class spacy_helper:
@@ -170,3 +173,20 @@ class spacy_helper:
         had  ===> have
         existed  ===> exist
         before  ===> before"""
+
+    """def word_frequency(self):
+        doc = nlp(self.english_text)
+        # remove stopwords and punctuations
+        words = [token.text for token in doc if token.is_stop != True and token.is_punct != True]
+        word_freq = Counter(words)
+        common_words = word_freq.most_common(len(self.english_text.split(' ')))
+        print(common_words)
+        # OUTPUT :
+        [('important', 4), ('mathematics', 4), ('algebra', 2), ('new', 2), ('concept', 2), ('allowed', 2), 
+        ('numbers', 2), ('algebraic', 2), ('development', 2), ('developments', 1), ('Arabic', 1), ('time', 1), 
+        ('began', 1), ('work', 1), ('Al', 1), ('Khwarizmi', 1), ('i.e.', 1), ('beginnings', 1), ('understand', 1), 
+        ('idea', 1), ('revolutionary', 1), ('departure', 1), ('Greek', 1), ('basis', 1), ('geometry', 1), 
+        ('unification', 1), ('theory', 1), ('rational', 1), ('irrational', 1), ('geometric', 1), ('expressions', 1), 
+        ('etc', 1), ('treated', 1), ('objects', 1), ('gave', 1), ('completely', 1), ('course', 1), ('broader', 1), 
+        ('existed', 1), ('provided', 1), ('means', 1), ('future', 1), ('subject', 1), ('aspect', 1), ('introducing', 
+        1), ('ideas', 1), ('applied', 1), ('way', 1)] """

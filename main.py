@@ -3,6 +3,7 @@ import libs
 from nltk_helper import nltk_helper
 from huggingface_helper import huggingface_helper
 from spacy_helper import spacy_helper
+from pytorch_helper import pytorch_helper
 
 # SpaCy : https://github.com/explosion/spaCy
 # https://iq.opengenus.org/text-preprocessing-in-spacy/
@@ -25,12 +26,11 @@ english_text = "Perhaps one of the most significant advances made by Arabic math
                "introduction of algebraic ideas was that it allowed mathematics to be applied to itself in a way " \
                "which had not happened before"
 
-
-
 print("*" * 10)
 print("1 - NLTK")
 print("2 - Huggingface")
 print("3 - SpaCy")
+print("4 - Word Frequency (TorchText)")
 print("*" * 10)
 selected = int(input("Select one of the following : "))
 
@@ -42,6 +42,7 @@ if selected == 1:
     print("5 - Chunking")
     print("6 - Stemming")
     print("7 - Lemmatization")
+    print("8 - Word Frequency")
     nltk_obj = nltk_helper(arabic_text, english_text)
     selected_method = int(input("Select one of the following : "))
     if selected_method == 1: nltk_obj.regular_expression()
@@ -51,6 +52,7 @@ if selected == 1:
     if selected_method == 5: nltk_obj.chunking(),
     if selected_method == 6: nltk_obj.stemming(),
     if selected_method == 7: nltk_obj.lemmatization()
+    if selected_method == 8: nltk_obj.word_frequency()
 
 if selected == 2:
     print("1 - Normal Tokenization")
@@ -66,6 +68,7 @@ if selected == 3:
     print("5 - Chunking")
     print("6 - Stemming")
     print("7 - Lemmatization")
+    print("8 - Word Frequency")
     spacy_obj = spacy_helper(arabic_text, english_text)
     selected_method = int(input("Select one of the following : "))
     if selected_method == 1: spacy_obj.regular_expression()
@@ -74,3 +77,7 @@ if selected == 3:
     if selected_method == 5: spacy_obj.chunking(),
     if selected_method == 6: spacy_obj.stemming(),
     if selected_method == 7: spacy_obj.lemmatization()
+
+if selected == 4:
+    pyt = pytorch_helper(arabic_text, english_text)
+    pyt.freq()
